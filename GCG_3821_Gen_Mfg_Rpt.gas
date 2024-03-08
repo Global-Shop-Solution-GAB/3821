@@ -1,0 +1,1731 @@
+Program.Sub.ScreenSU.Start
+
+Gui.F_Report..Create
+Gui.F_Report..Caption("Select")
+Gui.F_Report..Size(3195,1500)
+Gui.F_Report..Position(0,0)
+Gui.F_Report..AlwaysOnTop(False)
+Gui.F_Report..FontName("Arial")
+Gui.F_Report..FontSize(8)
+Gui.F_Report..ForeColor(0)
+Gui.F_Report..Backcolor(-2147483633)
+Gui.F_Report..ControlBox(True)
+Gui.F_Report..MaxButton(False)
+Gui.F_Report..MinButton(False)
+Gui.F_Report..MousePointer(0)
+Gui.F_Report..Moveable(True)
+Gui.F_Report..Sizeable(False)
+Gui.F_Report..ShowInTaskBar(True)
+Gui.F_Report..TitleBar(True)
+
+Gui.F_Report..Event(unload,f_report_unload)
+
+Gui.F_Report.cmdPrint.Create(button)
+Gui.F_Report.cmdPrint.Caption("Print")
+Gui.F_Report.cmdPrint.Visible(True)
+Gui.F_Report.cmdPrint.Size(800,375)
+Gui.F_Report.cmdPrint.Zorder(0)
+Gui.F_Report.cmdPrint.Position(200,400)
+Gui.F_Report.cmdPrint.Enabled(True)
+Gui.F_Report.cmdPrint.FontName("Arial")
+Gui.F_Report.cmdPrint.FontSize(8)
+Gui.F_Report.cmdPrint.DisableOnClick(20)
+Gui.F_Report.cmdPrint.TabStop(True)
+Gui.F_Report.cmdPrint.TabIndex(0)
+Gui.F_Report.cmdPrint.Tooltip("")
+Gui.F_Report.cmdPrint.ControlGroup(0)
+Gui.F_Report.cmdPrint.DefaultValue("")
+
+Gui.F_Report.cmdPrint.Event(click,cmdprint_click)
+
+Gui.F_Report.lblSelect.Create(label)
+Gui.F_Report.lblSelect.Caption("Line")
+Gui.F_Report.lblSelect.Visible(True)
+Gui.F_Report.lblSelect.Size(1935,255)
+Gui.F_Report.lblSelect.Zorder(1)
+Gui.F_Report.lblSelect.Position(200,200)
+Gui.F_Report.lblSelect.Enabled(True)
+Gui.F_Report.lblSelect.Alignment(0)
+Gui.F_Report.lblSelect.FontName("Arial")
+Gui.F_Report.lblSelect.FontSize(8)
+Gui.F_Report.lblSelect.Backcolor(-2147483633)
+Gui.F_Report.lblSelect.BackStyle(0)
+Gui.F_Report.lblSelect.Tooltip("")
+Gui.F_Report.lblSelect.ControlGroup(0)
+
+
+Gui.F_Report.cmdFile.Create(button)
+Gui.F_Report.cmdFile.Caption("File")
+Gui.F_Report.cmdFile.Visible(True)
+Gui.F_Report.cmdFile.Size(800,375)
+Gui.F_Report.cmdFile.Zorder(0)
+Gui.F_Report.cmdFile.Position(1100,400)
+Gui.F_Report.cmdFile.Enabled(True)
+Gui.F_Report.cmdFile.FontName("Arial")
+Gui.F_Report.cmdFile.FontSize(8)
+Gui.F_Report.cmdFile.DisableOnClick(20)
+Gui.F_Report.cmdFile.TabStop(True)
+Gui.F_Report.cmdFile.TabIndex(2)
+Gui.F_Report.cmdFile.Tooltip("")
+Gui.F_Report.cmdFile.ControlGroup(0)
+Gui.F_Report.cmdFile.DefaultValue("")
+
+Gui.F_Report.cmdFile.Event(click,cmdfile_click)
+
+Gui.F_Report.cmdView.Create(button)
+Gui.F_Report.cmdView.Caption("View")
+Gui.F_Report.cmdView.Visible(True)
+Gui.F_Report.cmdView.Size(800,375)
+Gui.F_Report.cmdView.Zorder(0)
+Gui.F_Report.cmdView.Position(2000,400)
+Gui.F_Report.cmdView.Enabled(True)
+Gui.F_Report.cmdView.FontName("Arial")
+Gui.F_Report.cmdView.FontSize(8)
+Gui.F_Report.cmdView.DisableOnClick(20)
+Gui.F_Report.cmdView.TabStop(True)
+Gui.F_Report.cmdView.TabIndex(3)
+Gui.F_Report.cmdView.Tooltip("")
+Gui.F_Report.cmdView.ControlGroup(0)
+Gui.F_Report.cmdView.DefaultValue("")
+
+Gui.F_Report.cmdView.Event(click,cmdview_click)
+
+gui.F_Report..minx(0)
+gui.F_Report..miny(0)
+Gui.F_Lines..Create
+Gui.F_Lines..Caption("Choose Report Options")
+Gui.F_Lines..Size(8340,4590)
+Gui.F_Lines..Position(0,0)
+Gui.F_Lines..AlwaysOnTop(True)
+Gui.F_Lines..FontName("Arial")
+Gui.F_Lines..FontSize(8)
+Gui.F_Lines..ForeColor(0)
+Gui.F_Lines..Backcolor(-2147483633)
+Gui.F_Lines..ControlBox(True)
+Gui.F_Lines..MaxButton(True)
+Gui.F_Lines..MinButton(False)
+Gui.F_Lines..MousePointer(0)
+Gui.F_Lines..Moveable(True)
+Gui.F_Lines..Sizeable(True)
+Gui.F_Lines..ShowInTaskBar(True)
+Gui.F_Lines..TitleBar(True)
+
+Gui.F_Lines..Event(resize,f_lines_resize)
+Gui.F_Lines..Event(unload,f_lines_unload)
+
+Gui.F_Lines.gsfgLines.Create(gsflexgrid)
+Gui.F_Lines.gsfgLines.Visible(True)
+Gui.F_Lines.gsfgLines.Size(7875,3390)
+Gui.F_Lines.gsfgLines.Zorder(0)
+Gui.F_Lines.gsfgLines.Position(100,100)
+Gui.F_Lines.gsfgLines.Enabled(True)
+Gui.F_Lines.gsfgLines.FixedRows(0)
+Gui.F_Lines.gsfgLines.FixedCols(0)
+
+
+Gui.F_Lines.cmdOk.Create(button)
+Gui.F_Lines.cmdOk.Caption("Ok")
+Gui.F_Lines.cmdOk.Visible(True)
+Gui.F_Lines.cmdOk.Size(855,350)
+Gui.F_Lines.cmdOk.Zorder(0)
+Gui.F_Lines.cmdOk.Position(100,3600)
+Gui.F_Lines.cmdOk.Enabled(True)
+Gui.F_Lines.cmdOk.FontName("Arial")
+Gui.F_Lines.cmdOk.FontSize(8)
+Gui.F_Lines.cmdOk.DisableOnClick(11)
+Gui.F_Lines.cmdOk.TabStop(True)
+Gui.F_Lines.cmdOk.TabIndex(1)
+Gui.F_Lines.cmdOk.Tooltip("")
+Gui.F_Lines.cmdOk.ControlGroup(0)
+Gui.F_Lines.cmdOk.DefaultValue("")
+
+Gui.F_Lines.cmdOk.Event(click,cmdok_click)
+
+gui.F_Lines..minx(0)
+gui.F_Lines..miny(0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.UDT.Report.Define("sAuthor",String)
+Variable.UDT.Report.Define("sSubject",String)
+Variable.UDT.Report.Define("sCreator",String)
+Variable.UDT.Report.Define("sKeywords",String)
+Variable.UDT.Report.Define("sLine",String,"RECORD_NO")
+Variable.UDT.Report.Define("sTitle",String)
+Variable.UDT.Report.Define("sPO",String,"CUSTOMER_PO")
+Variable.UDT.Report.Define("sPart",String,"PART")
+Variable.UDT.Report.Define("sFullPart",String,"FULLPART")
+Variable.UDT.Report.Define("sRev",String,"REV")
+Variable.UDT.Report.Define("sQualityPlan",String)
+Variable.UDT.Report.Define("sMatSpec",String)
+Variable.UDT.Report.Define("sHeat",String)
+Variable.UDT.Report.Define("sOrderNo",String,"ORDER_NO")
+Variable.UDT.Report.Define("sPackNo",String,"PCK_NO")
+Variable.UDT.Report.Define("sCustomerNo",String,"CUSTOMER")
+Variable.uGlobal.uRPT.Declare("Report")
+Variable.UDT.Item.Define("Part",String,"PART")
+Variable.UDT.Item.Define("Loc",String,"LOCATION")
+Variable.UDT.Item.Define("Lot",String,"LOT")
+Variable.UDT.Item.Define("Bin",String,"BIN")
+Variable.UDT.Item.Define("Heat",String,"HEAT")
+Variable.UDT.Item.Define("Serial",String,"SERIAL_NUMBER")
+Variable.Global.iMfgGrp.Declare(Long,-1)
+Variable.UDT.Docs.Define("Description",String,"DESCRIPTION")
+Variable.UDT.Docs.Define("Path",String,"PATH")
+Variable.UDT.Docs.Define("File",String,"FILE")
+Variable.UDT.Docs.Define("Type",String,"FILE_TYPE")
+Variable.UDT.UserFields.Define("Part",String,"PART")
+Variable.UDT.UserFields.Define("sMatSpec",String,"TEXT_INFO1")
+Variable.UDT.UserFields.Define("sQualityPlan",String,"TEXT_INFO2")
+Variable.uGlobal.uUserFields.Declare("UserFields")
+Variable.Global.sGenRptDir.Declare(String)
+Variable.Global.iRpt.Declare(Long,0)
+Variable.Global.sCoCRpt.Declare(String)
+Variable.Global.sMsg.Declare(String)
+Variable.Global.sHeatParam.Declare(String)
+Variable.Global.sSerialParam.Declare(String)
+Variable.Global.sSerialParam1.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Coded by: SMC
+'Project Start Date: 6/3/2011
+'Hooks:
+'  (16090) - When Packing slip is printed
+'  See Check_Setup for additional setup
+'Notes:
+'  Compiles all reports and prints links - Test Shipment 2032-00 on company code SMC
+
+'mod by trt
+'changed name of file to customerpo number_line number of order
+'change the addition of more than one heat number when printing items
+
+'mod 2 by Bix 14 Nov 2018
+'changed document search to get documents from WIP to FG lot/bin info from the WO attached to the order
+'then attach those lot/bin docs to the WO header and combine all those docs
+
+'
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+F.Intrinsic.Control.If(v.Caller.Hook,=,"-1")
+
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,<>,16090)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.Passed.009001,<>,"000051")
+		F.Intrinsic.Control.End
+	Function.Intrinsic.Control.EndIf
+	V.Passed.CANCEL.Set(1)
+F.Intrinsic.Control.EndIf
+
+
+V.Local.iC.Declare(Long)
+V.Local.sError.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.String.Concat(V.Caller.PluginsDir,"\GAB\GAS\Vanco Gen Report\",V.Global.sGenRptDir)
+F.Intrinsic.Control.CallSub(Check_setup)
+
+'F.Intrinsic.String.Concat("Select  GRP_ID from ATG_DOC_GRP where UCASE(GRP_Name)='","MANUFACTURING REPORT","'",V.Local.sQuery)
+V.Local.sQuery.Set("Select  GRP_ID from ATG_DOC_GRP where UCASE(GRP_Name)='MANUFACTURING REPORT'")
+F.ODBC.Connection!conx.OpenRecordsetRO("rstGrp",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conx!rstGrp.EOF,<>,True)
+	V.Global.iMfgGrp.Set(V.ODBC.conx!rstGrp.FieldVal!GRP_ID)
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Unable to find Document control group 'MANUFACTURING REPORT'")
+	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstGrp.Close
+
+F.Intrinsic.Control.CallSub(Get_items_to_print)
+
+F.Intrinsic.String.Concat(V.Global.sGenRptDir,"PackList",V.Caller.Terminal,".pdf",V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.File.DeleteFile(V.Local.sFile)
+F.Intrinsic.Control.EndIf
+V.Global.iRpt.Set(-1)
+'F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uRPT.UBound,1)
+'	F.Intrinsic.Control.CallSub(Generate_rpt)
+'F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.CallSub(Loadlist)
+Gui.F_Lines..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3037_Gen_Mfg_Rpt.Gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA("***ERROR:",V.Local.sError)
+	F.Intrinsic.Control.CallSub(Dl)
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.Generate_RPT.Start
+F.Intrinsic.Control.SetErrorHandler("Generate_RPT_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sHold.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sPDF.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.iRet.Declare(Long)
+V.Local.iPos.Declare(Long)
+V.Local.sFile.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.sXML.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.sValues.Declare(String)
+V.Local.sPackList.Declare(String)
+V.Local.sCPCoC.Declare(String)
+V.Local.sMeta1.Declare(String)
+V.Local.sHeat.declare(String)
+V.Local.iSerialUB.Declare(Long)
+v.Local.sSQL.Declare(String)
+v.Local.sSerialized.Declare(STring)
+
+'F.Intrinsic.Math.Add(V.Global.iRpt,1,V.Global.iRpt)
+'F.Intrinsic.Control.If(V.Global.iRpt,>,V.uGlobal.uRPT.UBound)
+'	F.Intrinsic.Control.CallSub(Unload)
+'F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.UI.InvokeWaitDialog("Generating manufacturing report ...")
+
+'Packing List
+'F.Intrinsic.String.Concat(V.Global.sGenRptDir,"PackList",V.Caller.Terminal,".pdf",V.Local.sFile)
+'F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+'F.Intrinsic.Control.If(V.Local.bExists,<>,True)
+'	F.Intrinsic.String.Split("Terminal*!*ReportID","*!*",V.Local.sParams)
+'	F.Intrinsic.String.Concat(V.Caller.Terminal,"*!*","000051",V.Local.sValues)
+'	F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+'	F.Global.BI.SaveReport(51,1,V.Local.sParams,V.Local.sValues,V.Local.sFile)
+'	F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+'	F.Intrinsic.Control.If(V.Local.bExists,<>,True)
+'		F.Intrinsic.UI.Msgbox("Unable to generate Packing List.")
+'		F.Intrinsic.Control.CallSub(Unload)
+'	F.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.EndIf
+'F.Intrinsic.File.GetFileNameFromFQN(V.Local.sFile,V.Local.sPackList)
+
+
+
+
+'CoverandCerts
+F.Intrinsic.String.Concat(V.Global.sGenRptDir,"CoverAndCerts",V.Caller.Terminal,".pdf",V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.File.DeleteFile(V.Local.sFile)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(Get_docs,"iPos",V.global.iRpt)
+
+
+
+
+F.Intrinsic.String.Occurs(v.Args.sHeat,",",v.Local.iC)
+F.Intrinsic.Control.If(V.Local.iC,>,2)
+	V.Global.sHeatParam.Set("See the attached Certificate of Compliance for a complete listing of heat numbers")
+	F.Intrinsic.String.Split(V.args.sheat,",",V.Local.sValues)
+	'ONLY GRAB THE FIRST THREE HEAT NUMBERS
+	F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sValues.UBound,1)
+		F.Intrinsic.Control.If(V.Local.iC,>,2)
+			F.Intrinsic.Control.ExitFor(V.Local.iC)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.If(V.Local.sTemp.Trim,=,"")
+			V.Local.sTemp.Set(V.Local.sValues(V.Local.iC).Trim)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Build("{0}, {1}",V.Local.sTemp,V.Local.sValues(V.LOCAL.iC).Trim,V.Local.sTemp)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.ic)
+	V.uGlobal.uRPT(V.global.iRpt)!sheat.Set(V.Local.sTemp.Trim)
+F.Intrinsic.Control.else
+	V.global.sHeatParam.Set(V.Args.sHeat)
+	V.uGlobal.uRPT(V.global.iRpt)!sheat.Set(V.Global.sHeatParam)
+F.Intrinsic.Control.EndIf
+
+
+
+
+
+
+
+
+
+'check our serial like our heat
+f.Intrinsic.String.Occurs(v.Args.sSerial,",",v.Local.iC)
+F.Intrinsic.Control.If(V.Local.iC,>,19)
+	V.Global.sSerialParam.Redim(0,3)
+	'see if the part is serialized. 
+	V.Global.sSerialParam(0).Set("")
+'	V.Global.sSerialParam1.Set("")
+	v.Local.sSerialized.Set("Y")
+F.Intrinsic.Control.Else
+'	V.Global.sSerialParam.Set(V.Args.sSerial)
+	'see if it's serialized first. if it is then do this if not pass NA on the GAB_Serial value. then the crystal report will display NA
+	
+	f.Intrinsic.String.Build("Select Flag_Serialize From V_Inventory_MSTR Where Part = '{0}'",v.uGlobal.uRPT(v.Global.iRpt)!sFullPart,v.Local.sSQL)
+	f.ODBC.Connection!conx.OpenLocalRecordsetRO("rstFlag",v.Local.sSQL)
+	Function.Intrinsic.Control.If(v.ODBC.conx!rstFlag.EOF,=,False)
+		Function.Intrinsic.Control.If(v.ODBC.conx!rstFlag.FieldValTrim!Flag_Serialize,=,"Y")
+			v.Local.sSerialized.Set("Y")
+			'break the two up since gssrl doesn't appear to like new line commands when passing
+			F.Intrinsic.String.Split(V.Args.sSerial,",",V.Local.sTemp)
+			V.Global.sSerialParam.Redim(0,3)
+			F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sTemp.UBound,1)
+
+				F.Intrinsic.String.RPad(V.Local.sTemp(v.Local.iC).Trim," ",30,V.Local.sTemp(v.Local.iC))
+				F.Intrinsic.Control.If(V.Local.iC,<=,4)
+					V.Local.iSerialUB.Set(0)
+				F.Intrinsic.Control.ElseIF(V.Local.iC,<=,9)
+				F.Intrinsic.Control.AndIf(V.Local.iC,>,4)
+					V.Local.iSerialUB.Set(1)
+				F.Intrinsic.Control.ElseIf(V.Local.iC,<=,14)
+				F.Intrinsic.Control.AndIf(V.Local.iC,>,9)
+					V.Local.iSerialUB.Set(2)
+				F.Intrinsic.Control.Else
+
+
+
+					V.Local.iSerialUB.Set(3)
+				F.Intrinsic.Control.EndIf
+
+				F.Intrinsic.Control.If(V.Global.sSerialParam(v.Local.iSerialUB).Trim,=,"")
+					V.Global.sSerialParam(v.Local.iSerialUB).Set(V.Local.sTemp(v.local.ic))
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("{0}{1}",V.Global.sSerialParam(v.Local.iSerialUB),V.Local.sTemp(v.Local.iC),V.Global.sSerialParam(v.Local.iSerialUB))
+		'		F.Intrinsic.Control.ElseIf(V.Local.ic,>=,6)
+		'			F.Intrinsic.Control.If(V.Global.sSerialParam1.Trim,=,"")
+		'				V.global.sSerialParam1.Set(V.Local.sTemp(v.Local.iC).Trim)
+		'			F.Intrinsic.Control.Else
+		'				F.Intrinsic.String.Build("{0},{1}",V.Global.sSerialParam1.Trim,V.Local.sTemp(v.Local.iC).Trim,V.Global.sSerialParam1)
+		'			F.Intrinsic.Control.endif
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Next(V.Local.iC)
+		Function.Intrinsic.Control.Else 
+			V.Global.sSerialParam.Redim(0,3)
+			v.Global.sSerialParam(0).Set("NA")
+			v.Local.sSerialized.Set("N")
+		Function.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.else 
+		V.Global.sSerialParam.Redim(0,3)
+		v.Global.sSerialParam(0).Set("NA")
+		v.Local.sSerialized.Set("N")
+	f.Intrinsic.Control.EndIf
+	f.ODBC.conx!rstFlag.Close
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Debug.SetLA("GAB_HEAT ",V.Global.sHeatParam)
+'F.Intrinsic.Debug.SetLA("gab_serial ",V.Global.sSerialParam)
+'F.Intrinsic.Debug.SetLA("gab_serial1 ",V.Global.sSerialParam1)
+
+
+'get logo path to be used on the report. 
+Function.Intrinsic.Control.CallSub(getlogo)
+
+'trt mod, moved this up here since he wants specific heats to only be displayed as well as serial numbers, we have to pass a params to report due to way original format'
+'format of report.
+'V.uGlobal.uRPT(v.Global.iRpt)!sHeat.Set(V.Args.sHeat)
+
+
+
+
+
+F.Intrinsic.String.Split("Terminal*!*ReportID*!*Line*!*GAB_HEAT*!*GAB_SERIAL*!*GAB_SERIAL_1*!*GAB_SERIAL_2*!*GAB_SERIAL_3*!*Header_Logo*!*Serialized","*!*",V.Local.sParams)
+'.Intrinsic.String.Concat(V.Caller.Terminal,"*!*000051*!*",V.uGlobal.uRPT(v.Global.iRpt)!sLine,"*!*",V.Global.sHeatParam,"*!*",V.Global.sSerialParam,"*!*",V.Global.sSerialParam1,V.Local.sValues)
+F.Intrinsic.String.Build("{0}*!*{1}*!*{2}0*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}*!*{9}",V.Caller.Terminal,"000051",V.uGlobal.uRPT(v.Global.iRpt)!sLine,V.Global.sHeatParam,V.Global.sSerialParam(0).Trim,V.Global.sSerialParam(1).Trim,V.Global.sSerialParam(2).Trim,V.Global.sSerialParam(3).Trim,v.Args.Logo_Path,v.Local.sSerialized,v.Local.sValues)
+F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+F.Global.BI.SaveReport(V.Global.sCoCRpt,1,V.Local.sParams,V.Local.sValues,V.Local.sFile)
+F.Intrinsic.UI.ChangeWaitStatus(V.Global.sMsg,5,1,10)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,<>,True)
+	F.Intrinsic.UI.Msgbox("Unable to generate Cover page and CoCs.")
+	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.File.GetFileNameFromFQN(V.Local.sFile,V.Local.sCPCoC)
+
+'F.Intrinsic.String.Concat(V.Local.sPackList,"*!*",V.Local.sCPCoC,V.Local.sPDF)
+V.Local.sPDF.Set(V.Local.sCPCoC)
+'already did it above wonder if we can just not.
+'F.Intrinsic.Control.CallSub(Get_docs,"iPos",V.Global.iRpt)
+F.Intrinsic.Control.If(V.Args.sDocs.Trim,=,"")
+'	F.Intrinsic.UI.Msgbox("Unable to locate item docs sDocs is blank")
+	F.Intrinsic.Debug.SetLA("unable to locate item docs sdocs is blank")
+'	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.ElseIf(V.Args.bItems,=,False)
+	F.Intrinsic.UI.Msgbox("Unable to locate item docs bItems=False")
+'	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat(V.Local.sPDF,V.Args.sDocs,V.Local.sPDF)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Split(V.Local.sPDF,"*!*",V.Local.sPDF)
+
+
+F.Intrinsic.String.Concat("xmlRpt",V.Global.iRpt,V.Local.sXML)
+F.Intrinsic.String.Concat("MergePDF",V.Caller.Terminal,".xml",V.Local.sFile)
+
+'Create XML
+F.Global.XML.CreateDocument(V.Local.sXML,False,True,False,False)
+'Set Root
+F.Global.XML.SetRoot(V.Local.sXML,"MergePDF")
+F.Intrinsic.String.Concat(V.Ambient.NewLine,V.Ambient.Tab,V.Local.sHold)
+F.Global.XML.AppendTextNode(V.Local.sXML,"root",V.Local.sHold)
+	'Properties Node
+	F.Global.XML.CreateElementNode(V.Local.sXML,"Properties","")
+	F.Intrinsic.String.Concat(V.Local.sHold,V.Ambient.Tab,V.Local.sHold)
+		'Author
+		F.Global.XML.CreateElementNode(V.Local.sXML,"Author",V.uGlobal.uRPT(v.Global.iRpt)!sAuthor)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Properties",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Properties","Author")
+		F.Global.XML.DestroyNode(V.Local.sXML,"Author")
+		'Subject
+		F.Global.XML.CreateElementNode(V.Local.sXML,"Subject",V.uGlobal.uRPT(v.Global.iRpt)!sSubject)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Properties",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Properties","Subject")
+		F.Global.XML.DestroyNode(V.Local.sXML,"Subject")
+		'Creator
+		F.Global.XML.CreateElementNode(V.Local.sXML,"Creator",V.uGlobal.uRPT(v.Global.iRpt)!sCreator)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Properties",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Properties","Creator")
+		F.Global.XML.DestroyNode(V.Local.sXML,"Creator")
+		'Keywords
+		F.Global.XML.CreateElementNode(V.Local.sXML,"Keywords",V.uGlobal.uRPT(v.Global.iRpt)!sKeywords)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Properties",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Properties","Keywords")
+		F.Global.XML.DestroyNode(V.Local.sXML,"Keywords")
+	F.Intrinsic.String.Concat(V.Ambient.NewLine,V.Ambient.Tab,V.Local.sHold)
+	F.Global.XML.AppendTextNode(V.Local.sXML,"Properties",V.Local.sHold)
+	F.Global.XML.AppendNodeToRoot(V.Local.sXML,"Properties")
+	F.Global.XML.DestroyNode(V.Local.sXML,"Properties")
+F.Intrinsic.String.Concat(V.Ambient.NewLine,V.Ambient.Tab,V.Local.sHold)
+F.Global.XML.AppendTextNode(V.Local.sXML,"root",V.Local.sHold)
+	'Report Node
+	F.Global.XML.CreateElementNode(V.Local.sXML,"Report","")
+	F.Intrinsic.String.Concat(V.Local.sHold,V.Ambient.Tab,V.Local.sHold)
+		'Report Title
+		F.Global.XML.CreateElementNode(V.Local.sXML,"ReportTitle",V.uGlobal.uRPT(v.Global.iRpt)!sTitle)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Report","ReportTitle")
+		F.Global.XML.DestroyNode(V.Local.sXML,"ReportTitle")
+		'Purchase Order
+		F.Global.XML.CreateElementNode(V.Local.sXML,"PurchaseOrder",V.uGlobal.uRPT(v.Global.iRpt)!sPO)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Report","PurchaseOrder")
+		F.Global.XML.DestroyNode(V.Local.sXML,"PurchaseOrder")
+		'Line Item
+		F.Global.XML.CreateElementNode(V.Local.sXML,"LineItem",V.uGlobal.uRPT(v.Global.iRpt)!sLine.left3)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Report","LineItem")
+		F.Global.XML.DestroyNode(V.Local.sXML,"LineItem")
+		'Part Number
+		F.Intrinsic.Debug.SetLA("Writing Part Number: ",V.uGlobal.uRPT(v.Global.iRpt)!sPart)
+		F.Global.XML.CreateElementNode(V.Local.sXML,"PartNumber",V.uGlobal.uRPT(v.Global.iRpt)!sPart)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Report","PartNumber")
+		F.Global.XML.DestroyNode(V.Local.sXML,"PartNumber")
+		'Rev
+
+
+
+		F.Intrinsic.Debug.SetLA("Writing Part Number: ",V.uGlobal.uRPT(v.Global.iRpt)!sRev)
+		F.Global.XML.CreateElementNode(V.Local.sXML,"Revision",V.uGlobal.uRPT(v.Global.iRpt)!sRev)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Report","Revision")
+		F.Global.XML.DestroyNode(V.Local.sXML,"Revision")
+		'Quality Plan
+		F.Global.XML.CreateElementNode(V.Local.sXML,"QualityPlan",V.uGlobal.uRPT(v.Global.iRpt)!sQualityPlan)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Report","QualityPlan")
+		F.Global.XML.DestroyNode(V.Local.sXML,"QualityPlan")
+		'Material Spec
+		F.Global.XML.CreateElementNode(V.Local.sXML,"MaterialSpecification",V.uGlobal.uRPT(v.Global.iRpt)!sMatSpec)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Report","MaterialSpecification")
+		F.Global.XML.DestroyNode(V.Local.sXML,"MaterialSpecification")
+		'Heat
+		F.Global.XML.CreateElementNode(V.Local.sXML,"HeatNumber",V.uGlobal.uRPT(v.Global.iRpt)!sHeat)
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Report","HeatNumber")
+		F.Global.XML.DestroyNode(V.Local.sXML,"HeatNumber")
+'		'PDF
+'		F.Global.XML.CreateElementNode(V.Local.sXML,"PDFFile","COVER SHEET.pdf")
+'		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+'		F.Global.XML.AppendNode(V.Local.sXML,"Report","PDFFile")
+'		F.Global.XML.DestroyNode(V.Local.sXML,"PDFFile")
+'		'PDF
+'		F.Global.XML.CreateElementNode(V.Local.sXML,"PDFFile","X03.pdf")
+'		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+'		F.Global.XML.AppendNode(V.Local.sXML,"Report","PDFFile")
+'		F.Global.XML.DestroyNode(V.Local.sXML,"PDFFile")
+'		'PDF
+'		F.Global.XML.CreateElementNode(V.Local.sXML,"PDFFile","D001022-20101214-104940.pdf")
+'		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+'		F.Global.XML.AppendNode(V.Local.sXML,"Report","PDFFile")
+'		F.Global.XML.DestroyNode(V.Local.sXML,"PDFFile")
+'		'PDF
+'		F.Global.XML.CreateElementNode(V.Local.sXML,"PDFFile","0024700-002.pdf")
+'		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+'		F.Global.XML.AppendNode(V.Local.sXML,"Report","PDFFile")
+'		F.Global.XML.DestroyNode(V.Local.sXML,"PDFFile")
+		F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sPDF.UBound,1)
+			F.Intrinsic.Control.If(V.Local.sPDF(v.Local.iC).Trim,<>,"")
+				F.Global.XML.CreateElementNode(V.Local.sXML,"PDFFile",V.Local.sPDF(v.Local.iC))
+				F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+				F.Global.XML.AppendNode(V.Local.sXML,"Report","PDFFile")
+				F.Global.XML.DestroyNode(V.Local.sXML,"PDFFile")
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.iC)
+		'Scale Pages
+		F.Global.XML.CreateElementNode(V.Local.sXML,"ScalePages","95")
+		F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+		F.Global.XML.AppendNode(V.Local.sXML,"Report","ScalePages")
+		F.Global.XML.DestroyNode(V.Local.sXML,"ScalePages")
+	F.Intrinsic.String.Concat(V.Ambient.NewLine,V.Ambient.Tab,V.Local.sHold)
+	F.Global.XML.AppendTextNode(V.Local.sXML,"Report",V.Local.sHold)
+	F.Global.XML.AppendNodeToRoot(V.Local.sXML,"Report")
+	F.Global.XML.DestroyNode(V.Local.sXML,"Report")
+F.Intrinsic.String.Concat(V.Ambient.NewLine,V.Ambient.Tab,V.Local.sHold)
+F.Global.XML.AppendTextNode(V.Local.sXML,"root",V.Local.sHold)
+
+'Save Doc
+F.Intrinsic.Debug.SetLA("XML File=",V.Local.sXML," File Name= ",V.Local.sFile," Directory=",V.Global.sGenRptDir)
+F.Global.XML.SaveDocument(V.Local.sXML,V.Global.sGenRptDir,V.Local.sFile)
+'Close Doc
+F.Global.XML.CloseDocument(V.Local.sXML)
+F.Intrinsic.UI.DoEvents
+
+'
+'
+F.Intrinsic.String.Concat(V.Global.sGenRptDir,"TestPDFUnity.exe",V.Local.sHold)
+F.Intrinsic.File.GetHandle(V.Local.iRet)
+
+'read meta data for the file name that we should save it as.
+
+V.Local.sMeta1.set(V.Screen.F_Report!lblSelect.MetaData1)
+'get name from fully qualitfied meta path
+F.Intrinsic.File.GetFileNameFromFQN(V.Local.sMeta1,V.Local.sMeta1)
+
+F.Intrinsic.String.Concat("-output ",V.local.sMeta1," -paramfile ",V.Local.sFile,V.Local.sParams)
+
+
+
+
+
+F.Intrinsic.Debug.SetLA("GenRptDir=",V.Global.sGenRptDir," File= ",V.Local.sHold," Params=",V.Local.sParams)
+F.Intrinsic.Task.ShellExecSync(V.Local.iRet,"OPEN",V.Local.sHold,V.Local.sParams,V.Global.sGenRptDir,1)
+
+'Delete docs copied to GenRptDir
+F.Intrinsic.Control.For(V.Local.iC,1,V.Local.sPDF.UBound,1)
+	F.Intrinsic.String.Concat(V.Global.sGenRptDir,V.Local.sPDF(v.Local.iC),V.Local.sHold)
+	F.Intrinsic.File.Exists(V.Local.sHold,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Intrinsic.File.DeleteFile(V.Local.sHold)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+
+'
+
+'F.Intrinsic.String.Concat(V.Global.sGenRptDir,"VancoReport",V.Caller.Terminal,".pdf",V.Local.sTemp)
+'F.Intrinsic.String.Concat(V.Global.sGenRptDir,V.Local.sFile,V.Local.sHold)
+'Gui.F_Report.lblSelect.SetMetaData(V.Local.sHold,V.Local.sTemp)
+'F.Intrinsic.UI.CloseWaitDialog
+'F.Intrinsic.File.Exists(V.Local.sTemp,V.Local.bExists)
+'F.Intrinsic.Control.If(V.Local.bExists,=,True)
+'	F.Intrinsic.String.Concat("Select option for Line ",V.uGlobal.uRPT(v.Global.iRpt)!sLine.Left3,V.Local.sTemp)
+'	Gui.F_Report.lblSelect.Caption(V.Local.sTemp)
+'	Gui.F_Report..Show
+'F.Intrinsic.Control.Else
+'	F.Intrinsic.UI.Msgbox("Report was not generated.")
+'	F.Intrinsic.Control.CallSub(F_report_unload)
+'F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Generate_RPT_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3037_Gen_Mfg_Rpt.Gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA("***ERROR:",V.Local.sError)
+	F.Intrinsic.Control.CallSub(Dl)
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Generate_RPT.End
+
+Program.Sub.Get_Docs.Start
+F.Intrinsic.Control.SetErrorHandler("Get_Docs_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sDocs.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.sTempH.Declare(String)
+V.Local.sTempS.Declare(String)
+V.Local.sInspectionRpt.Declare(String)
+V.Local.sOP.Declare(String)
+V.Local.sMTR.Declare(String)
+V.Local.sInspectionRpt.Redim(-1,-1)
+V.Local.sOP.Redim(-1,-1)
+V.Local.sMTR.Redim(-1,-1)
+V.Local.bOP.Declare(Boolean)
+V.Local.iPos.Declare(Long)
+V.Local.sPDFs.Declare(String)
+V.Local.sKey.Declare(String)
+V.Local.iC.Declare(Long)
+V.uLocal.uItems.Declare(Item)
+V.uLocal.uDocs.Declare(Docs)
+V.Local.iRet.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sItem.Declare(String)
+V.Local.sItem.Redim(0,5)
+V.Local.bPreserve.Declare(Boolean,False)
+V.Local.iUB.Declare(Long)
+V.Local.iPos.Set(V.Args.iPos)
+V.Local.sHeat.Declare(String)
+V.Local.sSerial.Declare(String)
+V.Local.iSerial.Declare(Long)
+V.Local.sOrdSuf.Declare(String)
+V.Local.iMod.Declare(Long)
+V.Local.sWO.Declare(String)
+V.Local.sJob.Declare(String)
+V.Local.sSuf.Declare(String)
+V.Local.sPath.Declare(String)
+V.Local.iWOLink.Declare(Long)
+V.Local.iCnt.Declare(Long)
+
+
+'Get all items used on shipment
+F.Intrinsic.String.LPad(V.uGlobal.uRPT(v.Local.iPos)!sPackNo,"0",7,V.Local.sTemp)
+
+'Took out the Invoice Condition... didn't seem to be working
+'CHANGE THE PROGRAM USED PROGRAM...NOWHERE DO I SEE THAT BEING USED ANYMORE...
+'F.Intrinsic.String.Concat("SELECT LTRIM(RTRIM(PART)) AS PART,LTRIM(RTRIM(LOCATION)) AS LOCATION,LTRIM(RTRIM(LOT)) AS LOT,LTRIM(RTRIM(BIN)) AS BIN,LTRIM(RTRIM(HEAT)) AS HEAT,LTRIM(RTRIM(SERIAL_NUMBER)) AS SERIAL_NUMBER FROM ITEM_HISTORY WHERE PROGRAM_USED='SHP110' AND ORDER_NO='",V.uGlobal.uRPT(v.Local.iPos)!sOrderNo,"' AND INVOICE='",V.Local.sTemp,"'",V.Local.sQuery)
+'problem with this is that it's pulling in alomst everything that has ever been shipped for thi sorder?
+'going to take a chance and grab the order number and order suffix from the table to see if this will work.. that when we go against item history we only are grabbing the parts that we want.
+F.Intrinsic.String.Build("Select Order_NO,Order_Suffix From V_BI_Packing_List Where Order_No = '{0}' And Terminal ='{1}' And RptID = '000051'",V.uGlobal.uRPT(v.Local.iPos)!sOrderNo,V.Caller.Terminal,V.Local.sQuery)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstBIPack",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conx!rstBIPack.EOF,<>,True)
+	V.Local.sordsuf.Set(V.ODBC.conx!rstBIPack.FieldVal!Order_Suffix)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstBIPack.Close
+
+'Check for WO
+V.Local.sWO.Set("")
+F.Intrinsic.String.Build("Select job,suffix FROM order_to_wo WHERE ORDER_NO='{0}' and order_line = '{1}0' order by JOB desc",V.uGlobal.uRPT(v.Local.iPos)!sOrderNo,V.uGlobal.uRPT(v.Local.iPos)!sLine,V.Local.sQuery)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,False)
+	V.Local.sJob.Set(V.ODBC.conx!rstLoad.FieldValtrim!job)
+	V.Local.sSuf.Set(V.ODBC.conx!rstLoad.FieldValtrim!suffix)
+	F.Intrinsic.String.Build("{0}{1}",V.Local.sJob,V.Local.sSuf,V.Local.sWO)
+F.Intrinsic.Control.Else
+	F.ODBC.conx!rstLoad.Close
+	F.Intrinsic.Variable.AddRV("sDocs","")
+	F.Intrinsic.Variable.AddRV("sHeat","")
+	F.Intrinsic.Variable.AddRV("sSerial","")
+	F.Intrinsic.Variable.AddRV("bItems",False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.endif
+F.ODBC.conx!rstLoad.Close
+
+'so this query don't work worth a crap if they go back in and edit their detail information. theres are record in there that reduces one or the other.
+'F.Intrinsic.String.Concat("SELECT LTRIM(RTRIM(PART)) AS PART,LTRIM(RTRIM(LOCATION)) AS LOCATION,LTRIM(RTRIM(LOT)) AS LOT,LTRIM(RTRIM(BIN)) AS BIN,LTRIM(RTRIM(HEAT)) AS HEAT,LTRIM(RTRIM(SERIAL_NUMBER)) AS SERIAL_NUMBER FROM ITEM_HISTORY WHERE PROGRAM_USED='ORD0FSGI' AND ORDER_NO='",V.uGlobal.uRPT(v.Local.iPos)!sOrderNo,"'",V.Local.sQuery)
+'F.Intrinsic.String.Build("Select Order_NO,Order_Line,Order_Suffix,LTRIM(RTRIM(Part)) As Part, LTRIM(RTRIM(LOCN)) AS Location, LTRIM(RTRIM(Lot)) AS LOT,LTRIM(RTRIM(BIN))AS BIN,LTRIM(RTRIM(Heat))As Heat,LTRIM(RTRIM(SERIAL)) AS SERIAL_NUMBER, Cast(Serial As Integer) As Ser_Conv FROM ORDER_HIST_LOT WHERE ORDER_NO='{0}'",V.uGlobal.uRPT(v.Local.iPos)!sOrderNo,V.Local.sQuery)
+F.Intrinsic.String.Build("Select Job,Suffix,Sequence,LTRIM(RTRIM(Part)) As Part, LTRIM(RTRIM(LOCATION)) AS Location, LTRIM(RTRIM(Lot)) AS LOT,LTRIM(RTRIM(BIN))AS BIN,LTRIM(RTRIM(Heat))As Heat,LTRIM(RTRIM(SERIAL_NUMBER)) AS SERIAL_NUMBER FROM ITEM_HISTORY WHERE Job='{0}' and Suffix = '{1}' and Sequence = '999999';",V.Local.sJob,V.Local.sSuf,V.Local.sQuery)
+'F.Intrinsic.String.Left(V.uGlobal.uRPT(v.Local.iPos)!sLine,3,V.Local.sTemp)
+'V.Local.sTemp.Set(V.uGlobal.uRPT(v.local.ipos)!sLine)
+'need to concat a trailing zero to s temp since we removed it from viewing and this pulls from that.... 
+'f.Intrinsic.String.Build("{0}0",v.uGlobal.uRPT(v.Local.iPos)!sLine,v.Local.sTemp)
+
+'F.Intrinsic.Control.If(V.Local.sOrdSuf.Trim,=,"")	
+'	F.Intrinsic.String.Concat(V.Local.sQuery," AND ORDER_LINE='",V.Local.sTemp,"' Order BY PART ASC,SERIAL_NUMBER ASC,LOT ASC,BIN ASC,HEAT ASC",V.Local.sQuery)
+'F.Intrinsic.Control.Else
+'	F.Intrinsic.String.Concat(V.Local.sQuery," AND ORDER_LINE='",V.Local.sTemp,"' And ORDER_Suffix = '",V.local.sordSuf.Trim,"' Order BY PART ASC,Serial_Number ASC,LOT ASC,BIN ASC,HEAT ASC",V.Local.sQuery)
+'F.Intrinsic.Control.EndIf
+F.Intrinsic.Debug.SetLA("Getting Items: ",V.Local.sQuery)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sQuery)
+F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstLoad","v.uLocal.uItems",False)
+F.ODBC.conx!rstLoad.Close
+
+V.Local.sHeat.Set("")
+F.Global.DocumentControl.CreateReference(V.Local.sWO,20,V.Local.iWOLink)
+'Get all links for items used on shipment
+F.Intrinsic.Control.For(V.Local.iC,0,V.uLocal.uItems.UBound,1)
+	F.Intrinsic.Control.If(V.uLocal.uItems(V.Local.iC)!Lot,<>,"")
+		F.Intrinsic.String.Build("\\dc01\apps\GLOBAL\LINKS\MTR\Processed\{0}.pdf",V.uLocal.uItems(V.Local.iC)!Lot,V.Local.sPath)
+		F.Global.DocumentControl.AddDocument(V.Local.iWOLink,V.Local.sPath,,V.Global.iMfgGrp,"PDF")
+	F.Intrinsic.Control.EndIf
+'	F.Intrinsic.String.RPad(V.uLocal.uItems(v.Local.iC)!Part," ",20,V.Local.sItem(0))
+'	F.Intrinsic.String.RPad(V.uLocal.uItems(v.Local.iC)!Loc," ",2,V.Local.sItem(1))
+'	F.Intrinsic.String.RPad(V.uLocal.uItems(v.Local.iC)!Lot," ",15,V.Local.sItem(2))
+'	F.Intrinsic.String.RPad(V.uLocal.uItems(v.Local.iC)!Bin," ",6,V.Local.sItem(3))
+'	F.Intrinsic.String.RPad(V.uLocal.uItems(v.Local.iC)!Heat," ",15,V.Local.sItem(4))
+'	F.Intrinsic.String.RPad(V.uLocal.uItems(v.Local.iC)!Serial," ",30,V.Local.sItem(5))
+'	F.Intrinsic.String.Concat(V.Local.sItem(0),V.Local.sItem(1),V.Local.sItem(2),V.Local.sItem(3),V.Local.sItem(4),V.Local.sItem(5),V.Local.sKey)
+'	F.Intrinsic.Control.If(V.Local.sheat.Trim,=,"")
+'		V.Local.sHeat.Set(V.uLocal.uItems(v.Local.iC)!Heat)
+'		V.Local.sTempH.Set(V.Local.sHeat.Trim)
+'	F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.Local.sHeat.Trim,<>,"")
+		'we only want to pull in specific heat numbers in there.
+		F.Intrinsic.String.Build("{0},{1}",V.Local.sHeat.Trim,V.uLocal.uItems(v.local.iC)!Heat,V.local.sHeat)
+	Function.Intrinsic.Control.Else 
+		v.Local.sHeat.Set(v.uLocal.uItems(v.Local.iC)!Heat) 		
+	F.Intrinsic.Control.EndIf
+
+	'do same thing with serial number as done with heat number above. only 20 unique serials will be
+	F.Intrinsic.Control.If(V.Local.sSerial.Trim,=,"")
+		V.Local.sSerial.Set(V.uLocal.uItems(v.Local.iC)!Serial)
+'		V.Local.sTempS.Set(V.Local.sSerial)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0},{1}",V.Local.sSerial.Trim,V.uLocal.uItems(v.Local.iC)!Serial,V.Local.sSerial)	
+	F.Intrinsic.Control.EndIf
+	F.Global.DocumentControl.CreateReference(V.Local.sKey,31,V.Local.iRet)
+	F.Intrinsic.Debug.SetLA("Key: ",V.Local.sKey," Link ID: ",V.Local.iRet)
+
+'	F.Intrinsic.String.Concat("SELECT DESCRIPTION, PATH, FILE, FILE_TYPE FROM ATG_DOC_ASSOC WHERE GRP_ID=",V.Global.iMfgGrp," AND LINK_ID=",V.Local.iRet,V.Local.sQuery)
+'	F.Intrinsic.Debug.SetLA("Getting documents: ",V.Local.sQuery)
+'	F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sQuery)
+'	F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,False)
+'		F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstLoad","v.uLocal.uDocs",True)
+'	F.Intrinsic.Control.EndIf
+'	F.ODBC.conx!rstLoad.Close
+F.Intrinsic.Control.Next(V.Local.iC)
+
+'F.Intrinsic.Control.For(V.Local.iCnt,0,V.uLocal.uDocs.UBound,1)
+'	F.Intrinsic.String.Build("{0}{1}",V.uLocal.uDocs(V.Local.iCnt)!Path.Trim,V.uLocal.uDocs(V.Local.iCnt)!File.Trim,V.Local.sPath)
+'	F.Global.DocumentControl.AddDocument(V.Local.iWOLink,V.Local.sPath,V.uLocal.uDocs(V.Local.iCnt)!Description.Trim,V.Global.iMfgGrp,V.uLocal.uDocs(V.Local.iCnt)!Type.Trim)
+'F.Intrinsic.Control.Next(V.Local.iCnt)
+
+'now that the lot bin records are attached to the WO, get a list of all the records on the WO header (old and new)
+F.Intrinsic.String.Concat("SELECT DESCRIPTION, PATH, FILE, FILE_TYPE FROM ATG_DOC_ASSOC WHERE GRP_ID=",V.Global.iMfgGrp," AND LINK_ID=",V.Local.iWOLink,V.Local.sQuery)
+F.Intrinsic.Debug.SetLA("Getting documents: ",V.Local.sQuery)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conx!rstLoad.EOF,=,False)
+	F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstLoad","v.uLocal.uDocs",False)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstLoad.Close
+
+F.Intrinsic.Control.For(V.Local.iC,0,V.uLocal.uDocs.UBound,1)
+	V.Local.bOP.Set(False)
+	V.Local.sTemp.Set(V.uLocal.uDocs(v.Local.iC)!Description.UCase)
+	F.Intrinsic.String.Trim(V.Local.sTemp,V.Local.sTemp)
+	F.Intrinsic.String.Instr(V.uLocal.uDocs(v.Local.iC)!Path.ucase,"\OP\",V.Local.iPos)
+	F.Intrinsic.Control.If(V.Local.iPos,<>,0)
+		V.Local.bOP.Set(True)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Instr(V.uLocal.uDocs(v.Local.iC)!Path.ucase,"\MTR\",V.Local.iPos)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Local.bOP,=,True)
+		F.Intrinsic.Math.Add(V.Local.sOP.UBound,1,V.Local.iUB)
+		F.Intrinsic.Control.If(V.Local.iUB,=,0)
+			V.Local.sOP.Redim(0,0)
+		F.Intrinsic.Control.Else
+			V.Local.sOP.RedimPreserve(0,V.Local.iUB)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Debug.SetLA(V.Local.sTemp," added to OP")
+		F.Intrinsic.String.Concat(V.uLocal.uDocs(v.Local.iC)!Path,V.uLocal.uDocs(v.Local.iC)!File,V.Local.sOP(v.Local.iUB))
+	F.Intrinsic.Control.ElseIf(V.Local.iPos,<>,0)
+		F.Intrinsic.Math.Add(V.Local.sMTR.UBound,1,V.Local.iUB)
+		F.Intrinsic.Control.If(V.Local.iUB,=,0)
+			V.Local.sMTR.Redim(0,0)
+		F.Intrinsic.Control.Else
+			V.Local.sMTR.RedimPreserve(0,V.Local.iUB)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Debug.SetLA(V.Local.sTemp," added to MTR")
+		F.Intrinsic.String.Concat(V.uLocal.uDocs(v.Local.iC)!Path,V.uLocal.uDocs(v.Local.iC)!File,V.Local.sMTR(v.Local.iUB))
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Math.Add(V.Local.sInspectionRpt.UBound,1,V.Local.iUB)
+		F.Intrinsic.Control.If(V.Local.iUB,=,0)
+			V.Local.sInspectionRpt.Redim(0,0)
+		F.Intrinsic.Control.Else
+			V.Local.sInspectionRpt.RedimPreserve(0,V.Local.iUB)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Debug.SetLA(V.Local.sTemp," added to InspectionRpt")
+		F.Intrinsic.String.Concat(V.uLocal.uDocs(v.Local.iC)!Path,V.uLocal.uDocs(v.Local.iC)!File,V.Local.sInspectionRpt(v.Local.iUB))
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.If(V.Local.sOP.UBound,>,0)
+	F.Intrinsic.String.RemoveArrayDuplicates(V.Local.sOP,V.Local.sOP)
+	F.Intrinsic.String.Join(V.Local.sOP,"*!*",V.Local.sOP)
+F.Intrinsic.Control.ElseIf(V.Local.sOP.UBound,<,0)
+	V.Local.sOP.Redim(0,0)
+	V.Local.sOP.Set("")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.sInspectionRpt.UBound,>,0)
+	F.Intrinsic.String.RemoveArrayDuplicates(V.Local.sInspectionRpt,V.Local.sInspectionRpt)
+	F.Intrinsic.String.Join(V.Local.sInspectionRpt,"*!*",V.Local.sInspectionRpt)
+F.Intrinsic.Control.ElseIf(V.Local.sInspectionRpt.UBound,<,0)
+	V.Local.sInspectionRpt.Redim(0,0)
+	V.Local.sInspectionRpt.Set("")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.sMTR.UBound,>,0)
+	F.Intrinsic.String.RemoveArrayDuplicates(V.Local.sMTR,V.Local.sMTR)
+	F.Intrinsic.String.Join(V.Local.sMTR,"*!*",V.Local.sMTR)
+F.Intrinsic.Control.ElseIf(V.Local.sMTR.UBound,<,0)
+	V.Local.sMTR.Redim(0,0)
+	V.Local.sMTR.Set("")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.CallSub(Copy_arr_to_dir,"sArr",V.Local.sMTR)
+F.Intrinsic.Control.If(V.Args.sArr.Trim,<>,"")
+	F.Intrinsic.String.Concat(V.Local.sPDFs,"*!*",V.Args.sArr,V.Local.sPDFs)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(Copy_arr_to_dir,"sArr",V.Local.sInspectionRpt)
+F.Intrinsic.Control.If(V.Args.sArr.Trim,<>,"")
+	F.Intrinsic.String.Concat(V.Local.sPDFs,"*!*",V.Args.sArr,V.Local.sPDFs)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.CallSub(Copy_arr_to_dir,"sArr",V.Local.sOP)
+F.Intrinsic.Control.If(V.Args.sArr.Trim,<>,"")
+	F.Intrinsic.String.Concat(V.Local.sPDFs,"*!*",V.Args.sArr,V.Local.sPDFs)
+F.Intrinsic.Control.EndIf
+
+
+'dont sort cause they were sorted as we added them this keeps them in order of how they should appear. 
+
+'remove the duplicate serials and heats if any exist. 
+F.Intrinsic.String.Split(V.Local.sHeat,",",v.Local.sTempH)
+f.Intrinsic.String.RemoveArrayDuplicates(v.Local.sTempH,v.Local.sTempH) 
+'only grab the first three 
+v.Local.sHeat.Set("")
+F.Intrinsic.Control.for(v.Local.ic,0,v.Local.sTempH.UBound,1) 
+	f.Intrinsic.Control.If(v.Local.ic,>,2) 
+		f.Intrinsic.Control.ExitFor(v.Local.iC)
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(v.Local.sHeat.Trim,=,"") 
+		v.Local.sHeat.Set(v.Local.sTempH(v.Local.iC))
+	Function.Intrinsic.Control.Else 
+		f.Intrinsic.String.Build("{0}, {1}",v.Local.sHeat,v.Local.sTempH(v.Local.iC),v.Local.sHeat)		
+	f.Intrinsic.Control.endif
+F.Intrinsic.Control.Next(v.Local.ic)
+
+'Remove Serials 
+F.Intrinsic.String.Split(v.Local.sSerial,",",v.Local.sTempS)
+F.Intrinsic.String.RemoveArrayDuplicates(v.Local.sTempS,v.Local.sTempS) 
+v.Local.sSerial.Set("") 
+F.Intrinsic.Control.For(v.Local.iC,0,v.Local.sTempS.UBound,1)
+	f.Intrinsic.Control.If(v.Local.iC,>,20) 
+		f.Intrinsic.Control.ExitFor(v.Local.ic)
+	Function.Intrinsic.Control.EndIf
+
+	Function.Intrinsic.Control.If(v.Local.sSerial.Trim,=,"")
+		v.Local.sSerial.Set(v.Local.stemps(v.Local.iC))
+	Function.Intrinsic.Control.Else 
+		f.Intrinsic.String.Build("{0}, {1}",v.Local.sSerial,v.Local.stempS(v.Local.ic),v.Local.sSerial)
+	Function.Intrinsic.Control.EndIf
+f.Intrinsic.Control.Next(v.Local.iC)
+
+
+F.Intrinsic.Variable.AddRV("sDocs",V.Local.sPDFs)
+F.Intrinsic.Control.If(V.uLocal.uItems.UBound,<,0)
+	F.Intrinsic.Variable.AddRV("sHeat","")
+	F.Intrinsic.Variable.AddRV("sSerial","")
+	F.Intrinsic.Variable.AddRV("bItems",False)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.uLocal.uItems(0)!Part.Trim,=,"")
+		F.Intrinsic.Variable.AddRV("sHeat","")
+	 F.Intrinsic.Variable.AddRV("sSerial","")
+		F.Intrinsic.Variable.AddRV("bItems",False)
+	F.Intrinsic.Control.Else
+
+		F.Intrinsic.Variable.AddRV("sHeat",V.local.sHeat)
+	F.Intrinsic.Variable.AddRV("sSerial",V.Local.sSerial)
+		F.Intrinsic.Variable.AddRV("bItems",True)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Get_Docs_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3037_Gen_Mfg_Rpt.Gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA("***ERROR:",V.Local.sError)
+	F.Intrinsic.Control.CallSub(Dl)
+Function.Intrinsic.Control.EndIf
+
+
+'F.Intrinsic.String.Concat("SELECT * FROM LINK_DATA WHERE ID LIKE '",V.Local.sPart.Trim,"%' AND TYPE='00031'",V.Local.sQuery)
+'F.ODBC.Connection!conx.OpenRecordsetRO("rstLinks",V.Local.sQuery)
+'F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstLinks.EOF,=,True)
+'	F.Intrinsic.String.Concat("SELECT * FROM ATG_DOC_ASSOC WHERE LINK_ID=",V.ODBC.conx!rstLinks.FieldValLong!LINK_ID,V.Local.sQuery)
+'	F.Intrinsic.Control.If(V.Global.iMfgGrp,<>,-1)
+'		F.Intrinsic.String.Concat(V.Local.sQuery," AND GRP_ID=",V.Global.iMfgGrp,V.Local.sQuery)
+'	F.Intrinsic.Control.EndIf
+'	F.ODBC.Connection!conx.OpenRecordsetRO("rstDocs",V.Local.sQuery)
+'	F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstDocs.EOF,=,True)
+'		V.Local.sTemp.Set(V.ODBC.conx!rstDocs.FieldValTrim!Description)
+'		V.Local.sTemp.Set(V.Local.sTemp.UCase)
+'		F.Intrinsic.String.Instr(V.Local.sTemp,"LINE",,V.Local.iPos)
+'		V.Local.bOP.Set(False)
+'		f.Intrinsic.Control.If(V.Local.sTemp.left2,=,"PO")
+'			F.Intrinsic.Control.If(V.Local.iPos,<>,0)
+'				V.Local.bOP.Set(True)
+'			F.Intrinsic.Control.EndIf
+'		F.Intrinsic.Control.EndIf
+'
+'		F.Intrinsic.Control.If(V.Local.bOP,=,True)
+'			F.Intrinsic.Math.Add(V.Local.sOP.UBound,1,V.Local.iUB)
+'			F.Intrinsic.Control.If(V.Local.iUB,=,0)
+'				V.Local.sOP.Redim(0,0)
+'			F.Intrinsic.Control.Else
+'				V.Local.sOP.RedimPreserve(0,V.Local.iUB)
+'			F.Intrinsic.Control.EndIf
+'			F.Intrinsic.String.Concat(V.ODBC.conx!rstDocs.FieldValTrim!PATH,V.ODBC.conx!rstDocs.FieldValTrim!FILE,V.Local.sOP(v.Local.iUB))
+'		F.Intrinsic.Control.ElseIf(V.Local.sTemp,=,"INSPECTION REPORT FILE")
+'			F.Intrinsic.Math.Add(V.Local.sInspectionRpt.UBound,1,V.Local.iUB)
+'			F.Intrinsic.Control.If(V.Local.iUB,=,0)
+'				V.Local.sInspectionRpt.Redim(0,0)
+'			F.Intrinsic.Control.Else
+'				V.Local.sInspectionRpt.RedimPreserve(0,V.Local.iUB)
+'			F.Intrinsic.Control.EndIf
+'			F.Intrinsic.String.Concat(V.ODBC.conx!rstDocs.FieldValTrim!PATH,V.ODBC.conx!rstDocs.FieldValTrim!FILE,V.Local.sInspectionRpt(v.Local.iUB))
+'		F.Intrinsic.Control.Else
+'			F.Intrinsic.Math.Add(V.Local.sMTR.UBound,1,V.Local.iUB)
+'			F.Intrinsic.Control.If(V.Local.iUB,=,0)
+'				V.Local.sMTR.Redim(0,0)
+'			F.Intrinsic.Control.Else
+'				V.Local.sMTR.RedimPreserve(0,V.Local.iUB)
+'			F.Intrinsic.Control.EndIf
+'			F.Intrinsic.String.Concat(V.ODBC.conx!rstDocs.FieldValTrim!PATH,V.ODBC.conx!rstDocs.FieldValTrim!FILE,V.Local.sMTR(v.Local.iUB))
+'		F.Intrinsic.Control.EndIf
+'		F.ODBC.conx!rstDocs.MoveNext
+'	F.Intrinsic.Control.Loop
+'	F.ODBC.conx!rstDocs.Close
+'	F.ODBC.conx!rstLinks.MoveNext
+'F.Intrinsic.Control.Loop
+'F.ODBC.conx!rstLinks.Close
+
+Program.Sub.Get_Docs.End
+
+Program.Sub.Check_Setup.Start
+F.Intrinsic.Control.SetErrorHandler("CheckSetup_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Check Required files in Global\plugins\GAB\GAS\Vanco Gen Rpt
+V.Local.sError.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sFile.Declare(String)
+V.Local.sMsg.Declare(String)
+
+F.Intrinsic.String.Concat(V.Global.sGenRptDir,"Vanco.Utilities.dll",V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.Debug.SetLA("Cannot generate Manufacturing Report.  Unable to find file:",V.Ambient.NewLine,V.Local.sFile)
+	F.Intrinsic.UI.Msgbox(V.Ambient.LastAction,"Missing File")
+	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Concat(V.Global.sGenRptDir,"itextsharp.dll",V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.Debug.SetLA("Cannot generate Manufacturing Report.  Unable to find file:",V.Ambient.NewLine,V.Local.sFile)
+	F.Intrinsic.UI.Msgbox(V.Ambient.LastAction,"Missing File")
+	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.String.Concat(V.Global.sGenRptDir,"CreateReport.bat",V.Local.sFile)
+'F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)'F
+'ntrinsic.Control.If(V.Local.bExists,=,False)
+'	F.Intrinsic.Debug.SetLA("Cannot generate Manufacturing Report.  Unable to find file:",V.Ambient.NewLine,V.Local.sFile)
+'	F.Intrinsic.UI.Msgbox(V.Ambient.LastAction,"Missing File")
+'	F.Intrinsic.Control.CallSub(Unload)
+'F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Concat(V.Global.sGenRptDir,"TestPDFUnity.exe",V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,False)
+	F.Intrinsic.Debug.SetLA("Cannot generate Manufacturing Report.  Unable to find file:",V.Ambient.NewLine,V.Local.sFile)
+	F.Intrinsic.UI.Msgbox(V.Ambient.LastAction,"Missing File")
+	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(V.Caller.BusintDir.Right1,=,"\")
+	F.Intrinsic.String.Concat(V.Caller.BusintDir,"Custom\VRG_CoverPage_CoC.RPT",V.Local.sFile)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat(V.Caller.BusintDir,"\Custom\VRG_CoverPage_CoC.RPT",V.Local.sFile)
+F.Intrinsic.Control.EndIf
+F.Global.BI.InitializeReport("VRG_CoverPage_CoC.RPT",V.Local.sFile,V.Global.sCoCRpt)
+F.Intrinsic.Control.If(V.Global.sCoCRpt,=,"-1")
+	F.Intrinsic.UI.Msgbox("Unable to setup Cover page and CoC Report.")
+	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CheckSetup_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3037_Gen_Mfg_Rpt.Gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA("***ERROR:",V.Local.sError)
+	F.Intrinsic.Control.CallSub(Dl)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Check_Setup.End
+
+Program.Sub.Copy_Arr_To_Dir.Start
+F.Intrinsic.Control.SetErrorHandler("Copy_Arr_To_Dir_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sFiles.Declare(String)
+V.Local.sNew.Declare(String)
+V.Local.sNew.Redim(-1,-1)
+V.Local.iUB.Declare(Long,-1)
+V.Local.iC.Declare(Long)
+V.Local.sTemp.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+F.Intrinsic.Control.If(V.Args.sArr.Trim,<>,"")
+	F.Intrinsic.String.Split(V.Args.sArr,"*!*",V.Local.sFiles)
+	F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sFiles.UBound,1)
+		F.Intrinsic.File.Exists(V.Local.sFiles(v.Local.iC),V.Local.bExists)
+		F.Intrinsic.Control.If(V.Local.bExists,=,True)
+			F.Intrinsic.Control.CallSub(Copy_file,"Source",V.Local.sFiles(v.Local.iC))
+			V.Local.sFiles(v.Local.iC).Set(V.Args.sFileCopy)
+			F.Intrinsic.Control.If(V.Args.bCopied,=,True)
+				F.Intrinsic.Math.Add(V.Local.iUB,1,V.Local.iUB)
+				F.Intrinsic.Control.If(V.Local.iUB,=,0)
+					V.Local.sNew.Redim(0,0)
+				F.Intrinsic.Control.Else
+					V.Local.sNew.RedimPreserve(0,V.Local.iUB)
+				F.Intrinsic.Control.EndIf
+				V.Local.sNew(v.Local.iUB).Set(V.Local.sFiles(v.Local.iC))
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Debug.SetLA("Unable to copy file to Gen Rpt directory:",V.Local.sFiles(v.Local.iC))
+				F.Intrinsic.Control.CallSub(Dl)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Debug.SetLA("File does not exist: ",V.Local.sFiles(v.Local.iC))
+			F.Intrinsic.Control.CallSub(Dl)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sNew.UBound,>=,0)
+	F.Intrinsic.String.Join(V.Local.sNew,"*!*",V.Local.sNew)
+F.Intrinsic.Control.Else
+	V.Local.sNew.Redim(0,0)
+	V.Local.sNew.Set("")
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Variable.AddRV("sArr",V.Local.sNew)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Copy_Arr_To_Dir_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3037_Gen_Mfg_Rpt.Gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA("***ERROR:",V.Local.sError)
+	F.Intrinsic.Control.CallSub(Dl)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Copy_Arr_To_Dir.End
+
+Program.Sub.DL.Start
+V.Local.bExists.Declare(Boolean)
+V.Local.sLine.Declare(String)
+V.Local.sJobs.Declare(String)
+V.Local.iErr.Declare(Long)
+V.static.iErrors.declare(Long)
+V.Static.sText.Declare(String)
+V.Local.sFile.Declare(String)
+
+F.Intrinsic.String.Concat(V.Ambient.Date," ",V.Ambient.Time," - ",V.Ambient.LastAction,V.Local.sLine)
+
+F.Intrinsic.Control.If(V.Static.sText,=,"")
+	V.static.sText.Set(V.Local.sLine)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat(V.static.sText,V.Ambient.NewLine,V.Local.sLine)
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.String.Instr(V.Ambient.LastAction.ucase,"ERROR",,V.Local.iErr)
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	F.Intrinsic.Math.Add(V.Static.iErrors,1,V.Static.iErrors)
+F.Intrinsic.Control.ElseIf(V.Local.iErr,<>,0)
+	F.Intrinsic.Math.Add(V.Static.iErrors,1,V.Static.iErrors)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Ambient.LastAction,=,"End")
+	F.Intrinsic.Control.If(V.Static.iErrors,>,0)
+		F.Intrinsic.String.Concat(V.Caller.FilesDir,"\GCG_3037_Gen_Mfg_Rpt.Gas.log",V.local.sFile)
+		F.Intrinsic.File.String2File(V.Local.sFile,V.Static.sText)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.Msgbox(V.Ambient.LastAction)
+
+Program.Sub.DL.End
+
+Program.Sub.Copy_File.Start
+F.Intrinsic.Control.SetErrorHandler("Copy_File_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sTarget.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.iPos.Declare(Long)
+V.Local.iExt.Declare(Long)
+V.Local.sExt.Declare(String)
+
+F.Intrinsic.File.GetFileNameFromFQN(V.Args.Source,V.Local.sTarget)
+F.Intrinsic.String.InstrRev(V.Local.sTarget,".",V.Local.iPos)
+F.Intrinsic.Control.If(V.Local.iPos,>,0)
+	F.Intrinsic.Math.Sub(V.Local.iPos,1,V.Local.iPos)
+	F.Intrinsic.Math.Sub(V.Local.sTarget.Length,V.Local.iPos,V.Local.iExt)
+	F.Intrinsic.String.Right(V.Local.sTarget,V.Local.iExt,V.Local.sExt)
+	F.Intrinsic.String.Left(V.Local.sTarget,V.Local.iPos,V.Local.sTarget)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Concat(V.Global.sGenRptDir,V.Local.sTarget,V.Caller.Terminal,V.Local.sExt,V.Local.sTarget)
+F.Intrinsic.File.CopyFile(V.Args.Source,V.Local.sTarget)
+F.Intrinsic.File.Exists(V.Local.sTarget,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.Variable.AddRV("bCopied","True")
+F.Intrinsic.Control.Else
+	F.Intrinsic.Variable.AddRV("bCopied","False")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.GetFileNameFromFQN(V.Local.sTarget,V.Local.sTarget)
+F.Intrinsic.Variable.AddRV("sFileCopy",V.Local.sTarget)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Copy_File_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3037_Gen_Mfg_Rpt.Gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA("***ERROR:",V.Local.sError)
+	F.Intrinsic.Variable.AddRV("bCopied","False")
+	F.Intrinsic.Control.CallSub(Dl)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Copy_File.End
+
+Program.Sub.Unload.Start
+V.Local.sFile.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+F.Intrinsic.String.Concat(V.Global.sGenRptDir,"PackList",V.Caller.Terminal,".pdf",V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.File.DeleteFile(V.Local.sFile)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+Program.Sub.Unload.End
+
+Program.Sub.Get_Items_To_Print.Start
+'V.uGlobal.uRPT!sAuthor.Set("Vancoring Gasket Specialty, Inc")
+'V.uGlobal.uRPT!sSubject.Set("Vanco Manufacturing Report")
+'V.uGlobal.uRPT!sCreator.Set("Vancoring Manufacturing Report System")
+'V.uGlobal.uRPT!sKeywords.Set("Manufacturing, Mill Test Report, Inspection Report, Certification")
+'V.uGlobal.uRPT!sTitle.Set("Vanco Manufacturing Report")
+'V.uGlobal.uRPT!sPO.Set("4501166486")
+'V.uGlobal.uRPT!sLine.Set("001")
+'V.uGlobal.uRPT!sPart.Set("2013332-01")
+'V.uGlobal.uRPT!sRev.Set("01")
+'V.uGlobal.uRPT!sQualityPlan.Set("QP-000808-01 Rev A04")
+'V.uGlobal.uRPT!sMatSpec.set("MS-004002-01 Rev. F06")
+'V.uGlobal.uRPT!sHeat.Set("H17060")
+
+V.Local.iC.Declare(Long)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bRun.Declare(Boolean)
+
+F.Intrinsic.String.Concat("SELECT ORDER_NO,CUSTOMER,CUSTOMER_PO,Left(RECORD_NO,3) As Record_NO,PCK_NO,LEFT(CONCAT(PART,REPLICATE(' ',20)),17) AS PART,RIGHT(LEFT(CONCAT(PART,REPLICATE(' ',20)),20),3) AS REV, PART AS FULLPART FROM BI_PACKING_LIST WHERE LINE_TYPE='L' AND TERMINAL='",V.Caller.Terminal,"'",V.Local.sQuery)
+
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad",V.Local.sQuery)
+F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstLoad","v.uGlobal.uRPT",False)
+F.ODBC.conx!rstLoad.Close
+
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uRPT!sAuthor,"Vancoring Gasket Specialty, Inc")
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uRPT!sSubject,"Vanco Manufacturing Report")
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uRPT!sCreator,"Vancoring Manufacturing Report System")
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uRPT!sKeywords,"Manufacturing, Mill Test Report, Inspection Report, Certification")
+F.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uRPT!sTitle,"Vanco Manufacturing Report")
+'f.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uRPT!sQualityPlan,"Quality Plan")
+'f.Intrinsic.Variable.UDTSetMemberValue(V.uGlobal.uRPT!sMatSpec,"Material Spec")
+
+V.Local.bRun.Set(False)
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uRPT.UBound,1)
+	V.Local.sRet.Set(V.uGlobal.uRPT(v.Local.iC)!sCustomerNo.UCase)
+'	F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"CIW001")
+		V.Local.bRun.Set(True)
+'	F.Intrinsic.Control.Else
+'		F.Intrinsic.Variable.UDTMultiFlag(V.uGlobal.uRPT!sCustomerNo,V.uGlobal.uRPT(v.Local.iC)!sCustomerNo)
+'	F.Intrinsic.Control.EndIf
+'trt mod 6/10/14 this is not working
+'going to pad the part number than grab left and right
+	F.Intrinsic.string.RPad(V.uGlobal.uRPT(v.Local.ic)!sFULLPart," ",20,V.Local.sQuery)
+
+
+
+	V.uGlobal.uRPT(v.Local.iC)!sPart.Set(V.Local.sQuery.left17)
+	V.uGlobal.uRPT(v.Local.iC)!sRev.Set(V.Local.sQuery.right3)
+F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uRPT)
+
+F.Intrinsic.Control.If(V.Local.bRun,=,False)
+	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conx.OpenRecordsetRO("rstLoad","SELECT PART,TEXT_INFO1,TEXT_INFO2 FROM INVENTORY_MST2")
+F.Intrinsic.Variable.LoadUDTFromRecordset("conx","rstLoad","v.uGlobal.uUserFields",False)
+F.ODBC.conx!rstLoad.Close
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uRPT.UBound,1)
+	F.Intrinsic.Variable.UDTSeek(V.uGlobal.uUserFields!Part,V.uGlobal.uRPT(v.Local.iC)!sFullPart,4,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+		V.uGlobal.uRPT(v.Local.iC)!sMatSpec.Set(V.uGlobal.uUserFields(v.Local.sRet.Long)!sMatSpec)
+		V.uGlobal.uRPT(v.Local.iC)!sQualityPlan.Set(V.uGlobal.uUserFields(v.Local.sRet.Long)!sQualityPlan)
+	F.Intrinsic.Control.EndIf
+'	V.uGlobal.uRPT(v.Local.iC)!sLine.Set(V.uGlobal.uRPT(v.Local.iC)!sLine.left3)
+F.Intrinsic.Control.Next(V.Local.iC)
+
+Program.Sub.Get_Items_To_Print.End
+
+program.sub.f_report_unload.start
+V.Local.bExists.Declare(Boolean)
+V.Local.iC.Declare(Long)
+
+F.Intrinsic.File.Exists(V.Screen.F_Report!lblSelect.MetaData0,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+'	F.Intrinsic.File.DeleteFile(V.Screen.F_Report!lblSelect.MetaData0)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.Exists(V.Screen.F_Report!lblSelect.MetaData1,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.File.DeleteFile(V.Screen.F_Report!lblSelect.MetaData1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.For(V.Local.iC,0,60,1)
+	F.Intrinsic.File.Exists(V.Screen.F_Report!lblSelect.MetaData1,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		F.Intrinsic.Control.ExitFor(V.Local.iC)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.UI.SleepMS(1)
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.If(V.Screen.F_Report.Visible,=,True)
+	Gui.F_Report..Visible(False)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.Control.CallSub(Generate_rpt)
+
+program.sub.f_report_unload.end
+
+program.sub.cmdprint_click.start
+V.Local.sFile.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.sRet.Declare(String)
+'F.Intrinsic.UI.InvokeWaitDialog("Processing ...")
+F.Intrinsic.UI.ChangeWaitStatus(V.Global.sMsg,10,1,10)
+F.Intrinsic.File.GetHandle(V.Local.iRet)
+F.Intrinsic.Debug.SetLA("Got Handle for this: ",V.Local.iRet)
+
+F.Intrinsic.String.Replace(V.Screen.F_Report!lblSelect.MetaData1,"_"," ",V.Local.sRet)
+F.Intrinsic.File.CopyOpenFile(V.Screen.F_Report!lblSelect.MetaData1,V.Local.sRet)
+Gui.F_Report.lblSelect.SetMetaData(V.Screen.F_Report!lblSelect.MetaData0,V.Screen.F_Report!lblSelect.MetaData1,V.Local.sRet)
+'
+'
+F.Intrinsic.Debug.SetLA("Sending this file ",V.local.sRet," to the defaulted printer")
+V.Local.sFile.Set(V.Screen.F_Report!lblSelect.MetaData1)
+F.Intrinsic.Debug.SetLA("File: ",V.Local.sRet)
+'F.Intrinsic.Task.ShellExec(V.caller.handle,"PRINT",V.Local.sRet,"","",0)
+'F.Intrinsic.UI.Sleep(1)
+F.Intrinsic.Task.ShellExecSync(V.caller.Handle,"PRINT",v.local.sRet,"","",0)
+'
+'
+'F.Intrinsic.UI.Msgbox(v.Ambient.ShellExecReturn,"Shell Exec Return")
+
+'F.Intrinsic.Task.ShellExecSync(v.caller.Handle,"PRINT",V.local.sRet,"","",0)
+'F.Intrinsic.File.DeleteFile(V.Screen.F_Report!lblSelect.MetaData1)
+
+'F.Intrinsic.Control.CallSub(F_report_unload)
+
+
+
+program.sub.cmdprint_click.end
+
+program.sub.cmdfile_click.start
+V.Local.sFile.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sFileName.Declare(String)
+
+'F.Intrinsic.UI.InvokeWaitDialog("Processing ...")
+F.Intrinsic.UI.ShowSaveFileDialog("","PDF files (*.pdf)|*.pdf",V.Local.sFile)
+F.Intrinsic.Debug.SetLA("File Path Created	",V.Local.sFile)
+F.Intrinsic.File.GetFileNameFromFQN(V.Local.sFile,V.Local.sFileName)
+F.Intrinsic.File.GetExtensionComponent(v.Local.sFilename,v.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"pdf")
+	F.Intrinsic.String.Build("{0}.pdf",V.Local.sFile,V.Local.sFile)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Debug.SetLA("New FIle: ",V.Local.sFile)
+F.Intrinsic.Control.If(V.Local.sFile,<>,"***CANCEL***")
+	F.Intrinsic.File.MoveFile(V.Screen.F_Report!lblSelect.MetaData1,V.Local.sFile,V.Local.iRet)
+'F.Intrinsic.Control.If(V.Local.iRet,=,0)
+'		F.Intrinsic.UI.Msgbox("Saving file has failed.")
+'	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.Control.CallSub(F_report_unload)
+
+program.sub.cmdfile_click.end
+
+program.sub.cmdview_click.start
+V.Local.sFile.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.sRet.Declare(String)
+
+'
+
+
+
+
+'
+'F.Intrinsic.UI.InvokeWaitDialog("Processing ...")
+F.Intrinsic.UI.ChangeWaitStatus(V.Global.sMsg,10,1,10)
+F.Intrinsic.String.Replace(V.Screen.F_Report!lblSelect.MetaData1,"_"," ",V.Local.sRet)
+F.Intrinsic.File.GetFileNameFromFQN(V.Local.sRet,V.Local.sFile)
+F.Intrinsic.String.Build("{0}\{1}",V.system.Temp,V.Local.sFile,V.Local.sRet)
+F.Intrinsic.File.CopyOpenFile(V.Screen.F_Report!lblSelect.MetaData1,V.Local.sRet)
+'F.Intrinsic.File.DeleteFile(V.Screen.F_Report!lblSelect.MetaData1)
+F.Intrinsic.Task.ShellExecSync(V.Caller.Handle,"OPEN",V.local.sRet,"","",4)
+'f.Intrinsic.UI.Msgbox(v.Ambient.shellexecreturn,"Shell Exec Return")
+Gui.F_Report.lblSelect.SetMetaData(V.Screen.F_Report!lblSelect.MetaData0,V.Screen.F_Report!lblSelect.MetaData1,V.Local.sRet)
+'F.Intrinsic.Control.CallSub(F_report_unload)
+
+
+
+
+program.sub.cmdview_click.end
+
+program.sub.f_lines_unload.start
+F.Intrinsic.Control.End
+
+program.sub.f_lines_unload.end
+
+Program.sub.cmdok_click.start
+V.Local.iR.Declare(Long)
+V.Local.iRows.Declare(Long)
+V.Local.sRow.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sHold.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sMsg.Declare(String)
+V.Local.iTemp.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sCustPo.Declare(String)
+
+Gui.F_Lines..Visible(False)
+Gui.F_Lines.gsfgLines.Commit
+
+
+
+
+
+F.Intrinsic.String.Concat("MergePDF",V.Caller.Terminal,".xml",V.Local.sFile)
+F.Intrinsic.Math.Sub(V.Screen.F_Lines!gsfgLines.Rows,1,V.Local.iRows)
+F.Intrinsic.UI.InvokeWaitDialog("Processing...")
+F.Intrinsic.Control.For(V.Local.iR,1,V.Local.iRows,1)
+	F.Intrinsic.Math.Sub(V.Local.iR,1,V.Global.iRpt)
+	Gui.F_Lines.gsfgLines.ReadRow(V.Local.iR,V.Local.sRow)
+	F.Intrinsic.Control.If(V.Local.sRow.left9,<>,"0*!*0*!*0")
+		F.Intrinsic.String.Split(V.Local.sRow,"*!*",V.Local.sRow)
+		'change file name to v.local.sRow(3) + " Line" + v.local.sRow(4)
+		'trt mod
+		'change file name to customer po and line number
+
+
+		F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uRPT!sOrderNo,V.Local.sRow(3).Trim,V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet.Trim,=,"")
+			'get the customer po number from the order a different way then.
+			F.Intrinsic.Control.CallSub(Get_custpo,"Order",V.Local.sRow(3).Trim)
+			F.Intrinsic.Variable.ArgExists("CustPO",V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists,=,True)
+				V.Local.sCustPo.Set(V.Args.CustPo)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+			V.Local.sCustPO.Set(V.uGlobal.uRPT(V.Local.sRet(0))!sPO)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Debug.SetLA("Customer PO of : ",V.Local.sCustPO.Trim," has spaces. Removing them and replace with _")
+		F.Intrinsic.string.Replace(V.Local.sCustPO.Trim," ","_",V.Local.sCustPO)
+
+		F.Intrinsic.String.Concat(V.Global.sGenRptDir,V.Local.sCustPo.Trim,"_Line_",V.Local.sRow(4).Left3,".pdf",V.Local.sTemp)
+'		F.Intrinsic.String.Concat(V.Global.sGenRptDir,"VancoReport",V.Caller.Terminal,".pdf",V.Local.sTemp)
+		F.Intrinsic.String.Concat(V.Global.sGenRptDir,V.Local.sFile,V.Local.sHold)
+	'setting meta data in lable of 0 and 1, 1 contains our file name for the output file we want....
+	F.Intrinsic.Debug.SetLA("Meta 0: ",V.Local.sHold," Meta 1: ",V.Local.sTemp)
+
+		Gui.F_Report.lblSelect.SetMetaData(V.Local.sHold,V.Local.sTemp)
+
+		F.Intrinsic.String.Concat("Processing Order #",V.Local.sRow(3)," Item #",V.Local.sRow(4),"...",V.global.sMsg)
+		F.Intrinsic.UI.ChangeWaitStatus(V.global.sMsg,1,1,10)
+
+		'commenting out the sub function since this is already done earlier in the sub by enm 7/10/2013
+'		F.Intrinsic.Math.Sub(V.Local.iR,1,V.Local.iTemp)
+'		V.Global.iRpt.Set(V.Local.iTemp)
+		F.Intrinsic.Control.CallSub(Generate_rpt)
+
+		'Print
+		F.Intrinsic.Control.If(V.Local.sRow(0),=,"1")
+			F.Intrinsic.Control.CallSub(Cmdprint_click)
+		F.Intrinsic.Control.EndIf
+
+		'View
+		F.Intrinsic.Control.If(V.Local.sRow(1),=,"1")
+			F.Intrinsic.Control.CallSub(Cmdview_click)
+		F.Intrinsic.Control.EndIf
+
+		'File
+		F.Intrinsic.Control.If(V.Local.sRow(2),=,"1")
+			F.Intrinsic.Control.CallSub(Cmdfile_click)
+		F.Intrinsic.Control.EndIf
+'		F.Intrinsic.File.Exists(V.Local.sTemp,V.Local.bExists)
+'		F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.Control.CallSub(Clean_up)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.UI.Sleep(2)
+F.Intrinsic.Control.Next(V.Local.iR)
+'F.Intrinsic.UI.ChangeWaitStatus("Processing...",V.Local.iRows,1,V.Local.iRows)
+'remove the xml and cover and certs documents from the plugins\gab\gas\vanco gen report directory.
+
+F.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.CallSub(Unload)
+
+program.sub.cmdok_click.end
+
+Program.Sub.LoadList.Start
+V.Local.iC.Declare(Long)
+
+Gui.F_Lines.gsfgLines.Rows(1)
+Gui.F_Lines.gsfgLines.Rows(2)
+Gui.F_Lines.gsfgLines.Cols(7)
+Gui.F_Lines.gsfgLines.TextMatrix(0,0,"Print")
+Gui.F_Lines.gsfgLines.ColWidth(0,500)
+Gui.F_Lines.gsfgLines.TextMatrix(1,0,"View")
+Gui.F_Lines.gsfgLines.ColWidth(1,500)
+Gui.F_Lines.gsfgLines.TextMatrix(2,0,"File")
+Gui.F_Lines.gsfgLines.ColWidth(2,500)
+Gui.F_Lines.gsfgLines.TextMatrix(3,0,"Order")
+Gui.F_Lines.gsfgLines.ColWidth(3,1200)
+Gui.F_Lines.gsfgLines.TextMatrix(4,0,"Item")
+Gui.F_Lines.gsfgLines.ColWidth(4,800)
+Gui.F_Lines.gsfgLines.TextMatrix(5,0,"Part")
+Gui.F_Lines.gsfgLines.ColWidth(5,2000)
+Gui.F_Lines.gsfgLines.TextMatrix(6,0,"PO Number")
+Gui.F_Lines.gsfgLines.ColWidth(6,2000)
+
+F.Intrinsic.Control.For(V.Local.iC,0,2,1)
+	Gui.F_Lines.gsfgLines.BuildStyle(1,V.Local.iC,"Type","CheckBox","2")
+	Gui.F_Lines.gsfgLines.BuildStyle(1,V.Local.iC,"Format","Alignment","4")
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.For(V.Local.iC,3,6,1)
+	Gui.F_Lines.gsfgLines.BuildStyle(1,V.Local.iC,"Type","Locked","True")
+	Gui.F_Lines.gsfgLines.BuildStyle(1,V.Local.iC,"Format","Alignment","2")
+F.Intrinsic.Control.Next(V.Local.iC)
+
+Gui.F_Lines.gsfgLines.FixedRows(1)
+Gui.F_Lines.gsfgLines.ApplyStyle(1,1)
+
+
+
+
+
+
+F.Intrinsic.Control.If(V.uGlobal.uRPT.UBound,>=,0)
+	Gui.F_Lines.gsfgLines.LoadFromUDT("uGlobal.uRPT","sOrderNo::3*!*sLine::4*!*sFullPart::5*!*sPO::6",1)
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadList.End
+
+program.sub.f_lines_resize.start
+V.Local.x.Declare(Long)
+V.Local.y.Declare(Long)
+V.Local.gX.Declare(Long)
+
+F.Intrinsic.Control.If(V.Screen.F_Lines.Width,<,8340)
+	Gui.F_Lines..Size(8340,V.Screen.F_Lines.Height)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Screen.F_Lines.Height,<,2100)
+	Gui.F_Lines..Size(V.Screen.F_Lines.Width,2100)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Math.Sub(V.Screen.F_Lines.Width,465,V.Local.x)
+F.Intrinsic.Math.Sub(V.Screen.F_Lines.Height,1170,V.Local.y)
+Gui.F_Lines.gsfgLines.Size(V.Local.x,V.Local.y)
+
+F.Intrinsic.Math.Add(V.Screen.F_Lines!gsfgLines.Height,210,V.Local.y)
+Gui.F_Lines.cmdOk.Position(V.Screen.F_Lines!cmdOk.Left,V.Local.y)
+
+F.Intrinsic.Control.If(V.Screen.F_Lines!gsfgLines.Width,<=,7875)
+	Gui.F_Lines.gsfgLines.ColWidth(3,1200)
+	Gui.F_Lines.gsfgLines.ColWidth(4,800)
+	Gui.F_Lines.gsfgLines.ColWidth(5,2000)
+	Gui.F_Lines.gsfgLines.ColWidth(6,2000)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Math.Sub(V.Screen.F_Lines!gsfgLines.Width,1875,V.Local.gX)
+	F.Intrinsic.Math.Mult(V.Local.gX,0.2,V.Local.x)
+	Gui.F_Lines.gsfgLines.ColWidth(3,V.Local.x)
+	F.Intrinsic.Math.Mult(V.Local.gX,0.133333,V.Local.x)
+	Gui.F_Lines.gsfgLines.ColWidth(4,V.Local.x)
+	F.Intrinsic.Math.Mult(V.Local.gX,0.333333,V.Local.x)
+	Gui.F_Lines.gsfgLines.ColWidth(5,V.Local.x)
+	Gui.F_Lines.gsfgLines.ColWidth(6,V.Local.x)
+F.Intrinsic.Control.EndIf
+
+program.sub.f_lines_resize.end
+
+Program.Sub.GET_CUSTPO.Start
+F.Intrinsic.Control.SetErrorHandler("GET_CUSTPO_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+'grab the customer po the old way then.
+V.Local.sSQL.Declare(String)
+V.Local.sOrd.Declare(String)
+
+V.Local.sOrd.Set(V.Args.Order)
+
+F.Intrinsic.String.Build("Select Customer_PO From V_Order_Header Where Order_No = '{0}'",v.Local.sOrd.Trim,v.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+
+
+
+
+
+F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,<>,True)
+	'we have to replace any spaces with different characters... the pdf unity doesn't like spaces...
+	F.Intrinsic.String.Replace(v.ODBC.conx!rst.FieldValTrim!Customer_PO," ","_",v.Local.sOrd)
+	F.Intrinsic.Debug.SetLA("Replaced Spaces in Cust PO: ",v.ODBC.conx!rst.FieldValTrim!Customer_PO," with spaces to read this : ",v.Local.sord)
+	F.Intrinsic.Variable.AddRV("CustPO",v.Local.sord)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Debug.SetLA("was unable to find the customer po....for order: ",V.Local.sOrd)
+F.Intrinsic.Control.Endif
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GET_CUSTPO_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3037_Gen_Mfg_Rpt.Gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.GET_CUSTPO.End
+
+Program.Sub.Clean_Up.Start
+F.Intrinsic.Control.SetErrorHandler("Clean_Up_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sXML.Declare(String)
+V.Local.sPDF.Declare(String)
+V.Local.sDir.Declare(String)
+V.Local.bEx.Declare(Boolean)
+
+
+'deleting the xml and cover and certs pdf file created by the gab program that are not longer needed.
+F.Intrinsic.Debug.SetLA("Cleaning up the no longer needed xml and pdf files.")
+F.Intrinsic.String.Build("{0}\Vanco Gen Report",V.Caller.GasDir,V.Local.sDir)
+F.Intrinsic.String.Build("{0}\MergePDF{1}.xml",V.Local.sDir,V.Caller.Terminal,V.Local.sXML)
+F.Intrinsic.String.Build("{0}\CoverAndCerts{1}.pdf",V.Local.sDir,V.Caller.Terminal,V.Local.sPDF)
+
+F.Intrinsic.File.Exists(V.Local.sXML,V.Local.bEx)
+F.Intrinsic.Control.If(V.Local.bEx,=,True)
+	F.Intrinsic.Debug.SetLA("Deleting XML File: ",V.Local.sXML)
+	F.Intrinsic.File.DeleteFile(V.Local.sXML)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Debug.SetLA("Not found XML File: ",V.Local.sXML)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.Exists(V.Local.sPDF,V.Local.bEx)
+F.Intrinsic.Control.If(V.Local.bEx,=,True)
+	F.Intrinsic.Debug.SetLA("Deleting PDF  File: ",V.Local.sPDF)
+	F.Intrinsic.File.DeleteFile(V.Local.sPDF)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Debug.SetLA("PDF File ",V.Local.sPDF," not found to be existing.")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.Exists(V.Screen.F_Report!lblSelect.MetaData1,V.Local.bEx)
+F.Intrinsic.Control.If(V.Local.bEx,=,True)
+	F.Intrinsic.Debug.SetLA("Deleting PDF: ",V.Screen.F_Report!lblSelect.MetaData1)
+	F.Intrinsic.File.DeleteFile(V.Screen.F_Report!lblSelect.MetaData1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.Exists(V.Screen.F_Report!lblSelect.MetaData2,V.Local.bEx)
+F.Intrinsic.Control.If(V.Local.bEx,=,True)
+	F.Intrinsic.Debug.SetLA("Deleting PDF file: ",V.Screen.F_Report!lblSelect.MetaData2)
+	F.Intrinsic.File.DeleteFile(V.Screen.F_Report!lblSelect.metadata2)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Clean_Up_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3037_Gen_Mfg_Rpt.Gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Clean_Up.End
+
+Program.Sub.GetLogo.Start
+F.Intrinsic.Control.SetErrorHandler("GetLogo_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+v.Local.sSQL.Declare(String) 
+v.Local.sRet.Declare(String) 
+
+'Get Logo from Custom Table Based on Customer. 
+'customer should be stored in our UDT? 
+f.Intrinsic.String.Build("Select Logo_Path From GCG_6949_Cust_Logo Where ID = '{0}'",v.uGlobal.uRPT(0)!sCustomerNo,v.Local.sSQL)
+f.ODBC.Connection!conx.OpenLocalRecordsetRW("rst",v.Local.sSQL)
+f.Intrinsic.Control.If(v.ODBC.conx!rst.EOF,=,True)
+	'have to get default logo path 
+	f.ODBC.conx!rst.Close
+	f.ODBC.Connection!conx.OpenLocalRecordsetRW("rst","Select Logo_Path From GCG_6949_Cust_Logo Where ID = '-1'")
+	f.Intrinsic.Control.If(v.ODBC.conx!rst.EOF,=,True) 
+		v.Local.sRet.Set("")
+	Function.Intrinsic.Control.Else 
+		v.Local.sRet.Set(v.ODBC.conx!rst.FieldValTrim!Logo_Path)
+	Function.Intrinsic.Control.EndIf
+	f.ODBC.conx!rst.Close
+Function.Intrinsic.Control.Else 
+	v.Local.sRet.Set(v.ODBC.conx!rst.FieldValTrim!Logo_Path) 
+	f.ODBC.conx!rst.Close
+Function.Intrinsic.Control.EndIf
+
+f.Intrinsic.Variable.AddRV("Logo_Path",v.Local.sRet)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetLogo_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3037_Gen_Mfg_Rpt.Gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.GetLogo.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12:00:00 AM$}$False
+Program.Sub.Comments.End
